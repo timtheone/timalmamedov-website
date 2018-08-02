@@ -1,0 +1,11 @@
+@import '../../style_assets/variables.scss';
+@import '../../style_assets/utilities.scss';
+
+.container-fluid {
+    padding: 0;
+}
+.test {
+    width: 100%;
+    height: 500px;
+    background-color: $purple;
+}

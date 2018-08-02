@@ -1,0 +1,43 @@
+@import '../../style_assets/variables.scss';
+@import '../../style_assets/utilities.scss';
+.banner-img {
+    img {
+        width: 65%;
+    }
+}
+.banner-text {
+    font-family: $mons-font;
+    margin-top: 150px;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+@media (min-width: 992px) and (max-width: 1150px) {
+    img {width: 85%!important;}
+    .banner-text{font-size: 25px;}
+}
+@media (min-width: 713px) and (max-width: 991px) {
+    .banner-text{
+        font-size: 25px;
+        margin-top: 80px;
+    }
+}
+@media (min-width: 576px) and (max-width: 712px) {
+    img {width: 93%!important;}
+    .banner-text{
+        font-size: 25px;
+        margin-top: 80px;
+    }
+}
+@media (max-width: 575px) {
+    img {
+        width: 100%!important;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .banner-text{
+        font-size: 20px;
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+}
