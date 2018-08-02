@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Khula|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Khula:400,700|Montserrat:400,700|Muli:400,700');
 @import 'style_assets/variables.scss';
 body {
-    font-family: $khula-font;
+    font-family: $muli-font;
+
 }
