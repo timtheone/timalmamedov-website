@@ -7,6 +7,7 @@ import { BannerComponent } from './banner/banner.component';
 import { BioComponent } from './bio/bio.component';
 import { ChartComponent } from './chart/chart.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     BannerComponent,
     BioComponent,
     ChartComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule

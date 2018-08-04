@@ -1,0 +1,88 @@
+@import '../../style_assets/variables.scss';
+@import '../../style_assets/utilities.scss';
+
+.test {
+    width: 100%;
+    height: 400px;
+}
+.test2 {
+    color: white;
+    position: absolute;
+    z-index: 1;
+    margin-top: -76px;
+    border-radius: 24px;
+    padding: 47px 0;
+    background-color: $navy;
+    h4 {
+        padding: 10px 0px;
+    }
+    .contact-btn {
+        a{  
+            background: transparent;
+            background: linear-gradient(270deg, rgba(129, 60, 255,0.8),rgba(155, 102, 255,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+            background-position: 1% 50%;
+            background-size: 300% 300%;
+            border: 2px solid $purple;
+            padding: 10px 60px;
+            color: white;
+            border-radius: 20px;
+            font-weight: 100;
+            font-size: 20px;
+            transition-duration: 0.7s;
+            &:hover {
+                text-decoration: none;
+                background-position: 99% 50%;
+            }
+        }
+    }
+    @media (max-width: 986px) {
+        .contact-btn{
+            a {
+                padding: 10px 23px;
+            }
+        }
+    }
+}
+.footer {
+    position: relative;
+    height: 450px;
+    width: 100%;
+    background-color: $purple;
+    font-size: 23px;
+    .links {
+        color: rgba(255,255,255,0.8);
+        margin-top: 250px;
+        i {
+            padding: 11px;
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 50%;
+            transition-duration: 0.3s;
+            &:hover {
+                background-color: white;
+                color: $purple;
+                border: 2px solid white;
+            }
+        }
+    }
+    .logo {
+        left: calc(50% - 40px);
+        position: absolute;
+        margin-top: 150px;
+        img {
+            width: 80px;
+        }
+    }
+    @media (max-width: 768px) {
+        .logo {
+            margin-top: 164px;
+        }
+        .links {
+            margin-top: 255px;
+        }
+    }
+}
+@media (max-width: 355px) {
+    .footer{
+        font-size: 14px;
+    }
+}
