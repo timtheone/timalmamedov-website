@@ -16,6 +16,10 @@ export class ChartComponent implements OnInit {
     let gradientVerticalStroke = ctx.createLinearGradient(0, 0, 0, 500);
     gradientVerticalStroke.addColorStop(0, "#813CFF");
     gradientVerticalStroke.addColorStop(1, "#84E1FC");
+
+    let gradientVerticalStrokeHover = ctx.createLinearGradient(0, 0, 0, 500);
+    gradientVerticalStrokeHover.addColorStop(0, "rgba(129, 60, 255,0.6)");
+    gradientVerticalStrokeHover.addColorStop(1, "rgba(132, 225, 252, 0.6)");
     let myChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -45,10 +49,32 @@ export class ChartComponent implements OnInit {
                   gradientVerticalStroke,
                   gradientVerticalStroke
                 ],
+                hoverBackgroundColor: [
+                  gradientVerticalStrokeHover,
+                  gradientVerticalStrokeHover,
+                  gradientVerticalStrokeHover,
+                  gradientVerticalStrokeHover,
+                  gradientVerticalStrokeHover,
+                  gradientVerticalStrokeHover,
+                  gradientVerticalStrokeHover,
+                  gradientVerticalStrokeHover,
+                  gradientVerticalStrokeHover
+                ],
                 borderWidth: 1
             }]
         },
         options: {
+            animation: {
+              duration: 2000
+            },
+            layout: {
+              padding: {
+                  left: 20,
+                  right: 20,
+                  top: 0,
+                  bottom: 0
+                }
+            },
             responsive: true,
             maintainAspectRatio: false,
             legend: {
@@ -59,7 +85,6 @@ export class ChartComponent implements OnInit {
                   autoSkip: false,
                   barThickness: 40,
                   gridLines: {
-                    // color: "rgba(0, 0, 0, 0)",
                     display: false
                   }
                 }],
@@ -96,9 +121,13 @@ export class ChartComponent implements OnInit {
 
     let canvasH = <HTMLCanvasElement> document.getElementById('chartH');
     let ctxH = canvasH.getContext("2d");
-    let gradientHorizontalStroke = ctx.createLinearGradient(0, 0, 400, 0);
+    let gradientHorizontalStroke = ctx.createLinearGradient(0, 0, 750, 0);
     gradientHorizontalStroke.addColorStop(0, "#84E1FC");
     gradientHorizontalStroke.addColorStop(1, "#813CFF");
+
+    let gradientHorizontalStrokeHover = ctx.createLinearGradient(0, 0, 750, 0);
+    gradientHorizontalStrokeHover.addColorStop(0, "rgba(132, 225, 252, 0.8)");
+    gradientHorizontalStrokeHover.addColorStop(1, "rgba(129, 60, 255,0.8)");
     let chartH = new Chart(ctxH, {
       type: 'horizontalBar',
       data: {
@@ -128,10 +157,32 @@ export class ChartComponent implements OnInit {
                 gradientHorizontalStroke,
                 gradientHorizontalStroke
               ],
-              borderWidth: 1
-          }]
-      },
-      options: {
+              hoverBackgroundColor: [
+                gradientHorizontalStrokeHover,
+                gradientHorizontalStrokeHover,
+                gradientHorizontalStrokeHover,
+                gradientHorizontalStrokeHover,
+                gradientHorizontalStrokeHover,
+                gradientHorizontalStrokeHover,
+                gradientHorizontalStrokeHover,
+                gradientHorizontalStrokeHover,
+                gradientHorizontalStrokeHover
+              ],§
+              borderWidth: 1§
+          }]§
+      },§
+      options: {§
+          animation: {§
+            duration: 2000
+          },
+          layout: {
+            padding: {
+                left: 20,
+                right: 20,
+                top: 0,
+                bottom: 0
+              }
+          },
           responsive: true,
           maintainAspectRatio: false,
           legend: {
@@ -145,6 +196,7 @@ export class ChartComponent implements OnInit {
               }],
               xAxes: [{
                 ticks: {
+                  min:0,
                   max: 100,
                   stepSize: 20,
                   autoSkip: false,
