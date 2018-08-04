@@ -167,12 +167,12 @@ export class ChartComponent implements OnInit {
                 gradientHorizontalStrokeHover,
                 gradientHorizontalStrokeHover,
                 gradientHorizontalStrokeHover
-              ],§
-              borderWidth: 1§
-          }]§
-      },§
-      options: {§
-          animation: {§
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          animation: {
             duration: 2000
           },
           layout: {
