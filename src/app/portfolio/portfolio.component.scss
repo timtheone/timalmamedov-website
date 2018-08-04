@@ -1,0 +1,27 @@
+@import '../../style_assets/variables.scss';
+@import '../../style_assets/utilities.scss';
+
+.showcase {
+    color: white;
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    .showcase-screenshot {
+        padding: 0;
+    }
+}
+#showcase1 {
+    background-color: $navy;
+}
+#showcase2 {
+    background-color: $red;
+}
+#showcase3 {
+    background-color: $grey;
+}
+
+#showcase-title {
+    font-family: $jura-font;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

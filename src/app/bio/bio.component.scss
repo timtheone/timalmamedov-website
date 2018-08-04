@@ -1,11 +1,33 @@
 @import '../../style_assets/variables.scss';
 @import '../../style_assets/utilities.scss';
 
-.container-fluid {
-    padding: 0;
-}
-.test {
+.bio-box {
     width: 100%;
-    height: 500px;
     background-color: $purple;
+}
+
+#bio {
+    color: white;
+    font-size: 21px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    h4 {
+        font-family: $jura-font;
+        font-weight: 700;
+    }
+    p{
+        font-weight: 100;
+    }
+}
+
+@media (max-width: 1575px) and (min-width: 1289px) {
+    #bio {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 1289px) {
+    #bio {
+        font-size: 17px;
+    }
 }

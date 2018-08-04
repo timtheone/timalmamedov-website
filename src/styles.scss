@@ -1,7 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Khula:400,700|Montserrat:400,700|Muli:400,700');
+@import url('https://fonts.googleapis.com/css?family=Jura:400,700|Lato:100,400,700');
 @import 'style_assets/variables.scss';
 body {
-    font-family: $muli-font;
+    font-family: $lato-font;
+}
 
+.jura {
+    font-family: $jura-font; 
+}
+
+.row {
+    margin-right: 0px!important;
+    margin-left: 0px!important;
+}
+
+.container-fluid {
+    padding-right: 0px!important;
+    padding-left: 0px!important;
 }

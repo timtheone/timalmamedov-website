@@ -14,8 +14,8 @@ export class ChartComponent implements OnInit {
     let canvas = <HTMLCanvasElement> document.getElementById('myChart');
     let ctx = canvas.getContext("2d");
     let gradientVerticalStroke = ctx.createLinearGradient(0, 0, 0, 500);
-    gradientVerticalStroke.addColorStop(0, "#813CFF");
-    gradientVerticalStroke.addColorStop(1, "#84E1FC");
+    gradientVerticalStroke.addColorStop(0, "#8C43FF");
+    gradientVerticalStroke.addColorStop(1, "#262947");
 
     let gradientVerticalStrokeHover = ctx.createLinearGradient(0, 0, 0, 500);
     gradientVerticalStrokeHover.addColorStop(0, "rgba(129, 60, 255,0.6)");
@@ -121,9 +121,9 @@ export class ChartComponent implements OnInit {
 
     let canvasH = <HTMLCanvasElement> document.getElementById('chartH');
     let ctxH = canvasH.getContext("2d");
-    let gradientHorizontalStroke = ctx.createLinearGradient(0, 0, 750, 0);
-    gradientHorizontalStroke.addColorStop(0, "#84E1FC");
-    gradientHorizontalStroke.addColorStop(1, "#813CFF");
+    let gradientHorizontalStroke = ctx.createLinearGradient(0, 0, 650, 0);
+    gradientHorizontalStroke.addColorStop(0, "#262947");
+    gradientHorizontalStroke.addColorStop(1, "#8C43FF");
 
     let gradientHorizontalStrokeHover = ctx.createLinearGradient(0, 0, 750, 0);
     gradientHorizontalStrokeHover.addColorStop(0, "rgba(132, 225, 252, 0.8)");
