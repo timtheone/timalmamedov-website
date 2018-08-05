@@ -1,7 +1,7 @@
 <hr style="margin-top: 100px;">
-<div class="container-fluid" style="padding: 0px;">
-  <h2 class="text-center" id="showcase-title">Some of my work</h2>
-    <div class="showcase" id="showcase1">
+<div class="container-fluid" class="portfolio" id="portfolio1">
+  <h2 [ngsReveal]="{duration: 2000}" class="text-center" id="showcase-title">Some of my work</h2>
+    <div class="showcase" id="showcase1" [ngsReveal]="{duration: 1300, origin: 'left', distance: '300px', scale: 1}">
       <div class="row">
         <div class="showcase-screenshot col-md-6 offset-md-1 col-lg-5 offset-lg-1">
             <!-- START CAROUSEL -->
@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <div class="showcase" id="showcase2">
+    <div class="showcase" id="showcase2" [ngsReveal]="{duration: 1300, origin: 'right', distance: '300px', scale: 1, viewFactor: 0}">
         <div class="row">
           <div class="showcase-description text-center col-md-3 offset-md-1 col-lg-4 offset-lg-1 order-2 order-sm-2 order-md-1 order-lg-1 order-xl-1">
               <h4 class="mt-5">Project 2</h4>
@@ -79,7 +79,7 @@
         </div>
       </div>
 
-    <div class="showcase" id="showcase3">
+    <div class="showcase" id="showcase3" [ngsReveal]="{duration: 1300, origin: 'left', distance: '300px', scale: 1, viewFactor: 0.1}">
         <div class="row">
             <div class="showcase-screenshot col-md-6 offset-md-1 col-lg-5 offset-lg-1">
               <!-- START CAROUSEL -->

@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="verticalChart">
+  <div [ngsReveal]="{reset: false, duration: 1200, origin: 'bottom', distance: '300px', easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'}" class="verticalChart">
     <h4 class="p-5 text-center jura">Technical Skills</h4>
     <div class="chart-wrapper">
       <canvas id="myChart" width="400" height="250"></canvas>
@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div class="horizontalChart">
+  <div [ngsReveal]="{reset: false, duration: 1200, origin: 'bottom', distance: '300px', easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'}" class="horizontalChart">
       <h4 class="p-5 text-center jura">Technical Skills</h4>
       <div class="chart-wrapper">
         <canvas id="chartH" width="600" height="250"></canvas>

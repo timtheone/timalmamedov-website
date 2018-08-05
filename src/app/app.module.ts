@@ -8,6 +8,23 @@ import { BioComponent } from './bio/bio.component';
 import { ChartComponent } from './chart/chart.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import {NgsRevealModule} from 'ng-scrollreveal';
+import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
+
+const appRoutes: Routes = [
+  {
+    path: '', component: HomeComponent
+  },
+  {
+    path: 'contact', component: ContactComponent
+  },
+  {
+    path: '**', component: NotFoundComponentComponent
+  }
+  ];
 
 @NgModule({
   declarations: [
@@ -17,10 +34,15 @@ import { FooterComponent } from './footer/footer.component';
     BioComponent,
     ChartComponent,
     PortfolioComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    ContactComponent,
+    NotFoundComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    NgsRevealModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

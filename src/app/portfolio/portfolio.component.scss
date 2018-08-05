@@ -1,6 +1,11 @@
 @import '../../style_assets/variables.scss';
 @import '../../style_assets/utilities.scss';
 
+.portfolio {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
+}
 .showcase {
     color: white;
     width: 100%;

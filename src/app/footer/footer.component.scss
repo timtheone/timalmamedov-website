@@ -1,11 +1,37 @@
 @import '../../style_assets/variables.scss';
 @import '../../style_assets/utilities.scss';
 
-.test {
+.white-placeholder {
     width: 100%;
     height: 400px;
+    #back-to-top {
+        a {
+            position: fixed;
+            z-index: 1;
+            right: 40px;
+            bottom: 50px;
+            border-radius: 6px;
+            font-size: 35px;
+            background-color: #2B2F51;
+            padding: 0px 15px;
+            opacity: 0.9;
+            color: white;
+        }
+    }
+    
 }
-.test2 {
+@media (max-width: 768px) {
+    .white-placeholder {
+        position: relative;
+    }
+    #back-to-top{
+        a {
+            position: absolute!important;
+            bottom: 170px!important;
+        }
+    }
+}
+.contact-box {
     color: white;
     position: absolute;
     z-index: 1;

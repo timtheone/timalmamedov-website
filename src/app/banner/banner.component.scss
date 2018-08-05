@@ -11,6 +11,10 @@
     font-size: 30px;
     font-weight: 400;
 }
+.banner {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 
 @media (min-width: 992px) and (max-width: 1150px) {
     img {width: 85%!important;}
