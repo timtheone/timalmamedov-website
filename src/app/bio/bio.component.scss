@@ -1,5 +1,4 @@
 @import '../../style_assets/variables.scss';
-@import '../../style_assets/utilities.scss';
 
 .bio-box {
     width: 100%;
@@ -16,7 +15,14 @@
         font-weight: 700;
     }
     p{
-        font-weight: 100;
+        font-weight: 300;
+        .school-link {
+            a{
+                color: white;
+                font-weight: 400;
+                text-decoration: underline;
+            }
+        }
     }
 }
 

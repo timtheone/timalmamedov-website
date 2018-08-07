@@ -1,6 +1,35 @@
-<h1>Information Request</h1>
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <input type="text" placeholder="Name" formControlName="name">
-  <input type="text" placeholder="Email" formControlName="email">
-  <textarea placeholder="Message" formControlName="message"></textarea>
-  <button type="submit" [disabled]="form.invalid">Submit</button></form>
+<app-navbar></app-navbar>
+<div class="container-fluid" [ngsReveal]="{ duration: 500, origin: 'top',distance: '50px', easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'}">
+  <div class="text-center mt-5 mb-5 jura" style="padding-left: 10px;padding-right: 10px;">
+    <h2>Thanks for taking the time to reach out</h2>
+    <h2>How can I help you?</h2>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="row">
+    <div class="form-group col-xl-2 col-lg-3 col-md-4 col-sm-6 offset-xl-4 offset-lg-3 offset-md-2">
+      <label for="name">Name</label>
+      <input class="form-control" type="text" formControlName="name" style="height: calc(2.25rem + 12px);" [ngClass]="{'red-border-class': nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched)}">
+      <div *ngIf="nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched)" style="color: red;">Name is required</div>
+    </div>
+    <div class="form-group col-xl-2 col-lg-3 col-md-4 col-sm-6">
+      <label for="name">Email</label>
+      <input class="form-control" type="email" formControlName="email" style="height: calc(2.25rem + 12px);" [ngClass]="{'red-border-class': emailCtrl.invalid && (emailCtrl.dirty || emailCtrl.touched)}">
+      <div *ngIf="emailCtrl.invalid && (emailCtrl.dirty || emailCtrl.touched)" style="color: red;">
+        <div *ngIf="emailCtrl.errors.required">Email is required</div>
+        <div *ngIf="emailCtrl.errors.email">Please provide a valid Email</div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="form-group col-xl-4 col-lg-6 col-md-8 offset-xl-4 offset-lg-3 offset-md-2">
+      <label for="name">Message</label>
+      <textarea class="form-control" formControlName="message" rows="8" [ngClass]="{'red-border-class': messageCtrl.invalid && (messageCtrl.dirty || messageCtrl.touched)}"></textarea>
+      <div *ngIf="messageCtrl.invalid && (messageCtrl.dirty || messageCtrl.touched)" style="color: red;">Message is Required</div>
+    </div>
+    </div>
+    <div class="d-flex justify-content-center btn-wrapper">
+      <button id="btn-submit" type="submit">Send me a Message</button>
+    </div>
+  </form>
+</div>
+

@@ -1,5 +1,4 @@
 @import '../../style_assets/variables.scss';
-@import '../../style_assets/utilities.scss';
 
 .white-placeholder {
     width: 100%;
@@ -52,7 +51,7 @@
             padding: 10px 60px;
             color: white;
             border-radius: 20px;
-            font-weight: 100;
+            font-weight: 300;
             font-size: 20px;
             transition-duration: 0.7s;
             &:hover {
@@ -75,9 +74,21 @@
     width: 100%;
     background-color: $purple;
     font-size: 23px;
-    .links {
+    .footer-text {
+        font-weight: 300;
+        font-size: 15px;
+        margin-top: 30px;
         color: rgba(255,255,255,0.8);
+        p:nth-child(1) {
+            margin-bottom: 5px
+        }
+    }
+    .links {
         margin-top: 250px;
+        a{
+            text-decoration: none;
+            color: rgba(255,255,255,0.8);
+        }
         i {
             padding: 11px;
             border: 2px solid rgba(255,255,255,0.5);

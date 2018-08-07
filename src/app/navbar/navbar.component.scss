@@ -1,11 +1,13 @@
 @import '../../style_assets/variables.scss';
-@import '../../style_assets/utilities.scss';
 .navbar {
     font-size: 18px;
     .nav-item {
         a{
             color: $navy;
         }
+    }
+    #navbarNav{
+        margin-top: 11px;
     }
     .logo {
         margin-left: 120px;
@@ -28,12 +30,12 @@
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
    .nav-item,.navbar-nav {
        margin-right: 35px;
    }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .logo {
         margin-left: 0px!important;
     }

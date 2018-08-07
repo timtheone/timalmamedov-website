@@ -1,3 +1,4 @@
+import { ScrollService } from './scroll.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -20,6 +21,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import {NgsRevealModule} from 'ng-scrollreveal';
 import { NotFoundComponentComponent } from './not-found-component/not-found-component.component';
+
 
 const appRoutes: Routes = [
   {
@@ -54,7 +56,7 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [ScrollService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

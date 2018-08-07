@@ -16,17 +16,11 @@ const gmailPassword = encodeURIComponent(functions.config().gmail.password);
 const mailTransport = nodemailer.createTransport(`smtps://${gmailEmail}:${gmailPassword}@smtp.gmail.com`);
 
 
-exports.sendContactMessage = functions.database.ref('/messages/{pushKey}').onWrite((change,context) => {
-    // const snapshot = event.data;
-    // Only send email for new messages.
-    if (change.before.val() || !change.after.val().name) {
-      return;
-    }
-    
-    const val = change.after.val();
+exports.sendContactMessage = functions.region('europe-west1').database.ref('/messages/{pushKey}').onCreate((snap,context) => {
+    const val = snap.val();
     
     const mailOptions = {
-      to: 'timur.almamedov@gmail.com',
+      to: 'info@timalmamedov.com',
       subject: `Information Request from ${val.name}`,
       html: val.html
     };

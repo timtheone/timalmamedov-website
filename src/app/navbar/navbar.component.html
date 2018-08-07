@@ -1,19 +1,22 @@
 <nav [ngsReveal]="{ duration: 500, origin: 'top',distance: '50px', easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'}" id="navbar1" class="navbar navbar-expand-md navbar-light bg-transparent">
-  <a class="navbar-brand logo" href="#"><img src="assets/images/logo/logo-purple.png" alt="Logo of T.A initials"></a>
+  <a class="navbar-brand logo" [routerLink]="['/']"><img src="assets/images/logo/logo-purple.png" alt="Logo of T.A initials"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#bio">about</a>
+      <li class="nav-item" *ngIf="!routeState">
+        <a class="nav-link"  href="javascript:;" (click)="scroller.scrollTo('bio',1000)">about</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#portfolio1">work</a>
+      <li class="nav-item" *ngIf="!routeState">
+        <a class="nav-link" href="javascript:;" (click)="scroller.scrollTo('portfolio1',1800)">work</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link contact-link" href="#">let's chat</a>
+      <li class="nav-item" *ngIf="!routeState">
+        <a class="nav-link contact-link" [routerLink]="['/contact']">let's chat</a>
       </li>
+      <li class="nav-item" *ngIf="routeState">
+          <a class="nav-link contact-link" [routerLink]="['/']">Go back</a>
+        </li>
     </ul>
   </div>
 </nav>

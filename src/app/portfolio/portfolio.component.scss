@@ -1,5 +1,4 @@
 @import '../../style_assets/variables.scss';
-@import '../../style_assets/utilities.scss';
 
 .portfolio {
     overflow-x: hidden;
@@ -13,6 +12,30 @@
     padding-bottom: 10%;
     .showcase-screenshot {
         padding: 0;
+    }
+    .showcase-description {
+        a {
+            color: #FFE66D;
+        }
+        li {
+            padding: 0 0 5px 0;
+        }
+        #bootstrap{
+            img {
+                width: 7.5%;
+            }
+        }
+        .tech-logo {
+            padding-right: 10px;
+            img {
+                width: 8%;
+            }
+        }
+        @media (max-width: 991px) {
+            h4 {
+                margin-top: 40px;
+            }
+        }
     }
 }
 #showcase1 {

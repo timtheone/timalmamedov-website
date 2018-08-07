@@ -1,0 +1,28 @@
+@import '../../style_assets/variables.scss';
+#btn-submit {
+    background-color: white;
+    border: 1px solid $purple;
+    padding: 10px 50px;
+    color: $purple;
+    border-radius: 30px;
+    transition-duration: 0.3s;
+    margin-bottom: 120px;
+    margin-top: 30px;
+    &:hover {
+        text-decoration: none;
+        color: white;
+        background-color: $purple;
+    }
+}
+
+.red-border-class {
+    border: 1px solid red;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: $purple;
+}
+#btn-submit {
+    outline: none;
+}

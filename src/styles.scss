@@ -1,8 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Jura:400,700|Lato:100,400,700');
+@import url('https://fonts.googleapis.com/css?family=Jura|Lato:100,300,400');
 @import 'style_assets/variables.scss';
+@import '../node_modules/toastr/build/toastr.min.css';
+
 body {
     font-family: $lato-font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .jura {

@@ -1,4 +1,3 @@
-import { browser } from 'protractor';
 import { Component, OnInit } from '@angular/core';
 import { Chart } from "chart.js";
 
@@ -26,7 +25,7 @@ export class ChartComponent implements OnInit {
             labels: ["HTML", "CSS(SCSS)", "Javascript(ES6)", "jQuery", "Angular2+", "PHP","MySQL","Symfony","Ruby/Rails"],
             datasets: [{
                 label: 'Technical Skills',
-                data: [78, 74, 62, 65, 28, 40, 45, 22, 38],
+                data: [78, 74, 55, 57, 34, 40, 45, 22, 38],
                 backgroundColor: [
                     gradientVerticalStroke,
                     gradientVerticalStroke,

@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="white-placeholder">
     <div id="back-to-top">
-      <a href="#navbar1"><i class="fas fa-angle-up"></i></a>
+      <a href="javascript:;" (click)="scroller.scrollTo('navbar1',2400)"><i class="fas fa-angle-up"></i></a>
     </div>
   </div>
   <div class="row">
@@ -9,7 +9,7 @@
       <div class="row">
         <h4 class="jura col-lg-6 col-md-6 d-flex justify-content-center justify-content-md-center">Any questions?</h4>
         <div class="contact-btn col-lg-6 col-md-6 d-flex justify-content-center justify-content-md-center">
-        <a href="#">Send me a message</a>
+        <a [routerLink]="['/contact']">Send me a message</a>
         </div>
       </div>
     </div>
@@ -20,10 +20,14 @@
       </div>
     <div class="row">
       <div class="links col-lg-2 col-md-4 col-sm-4 col-6 offset-lg-5 offset-md-4 offset-sm-4 offset-3 d-flex justify-content-between">
-        <i class="fab fa-github"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-linkedin-in"></i>
+        <a href="https://github.com/timtheone" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/almamedovtimur" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/toymurad-almamedov-328531137/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div> 
+    </div>
+    <div class="footer-text text-center">
+      <p>Tim Almamedov</p>
+      <p>Made with <span style="padding-left: 10px;"><img src="assets/images/logo/angular.png" style="width: 20px;padding-bottom: 2px;" alt=""></span>Angular</p>
     </div>
   </div>
 </div>
