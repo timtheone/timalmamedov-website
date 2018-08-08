@@ -54,7 +54,6 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle('Tim Almamedov | Contact');
     let test = this.titleService.getTitle();
-    console.log(test);
   }
 
 }

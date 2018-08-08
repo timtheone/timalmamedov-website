@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
   }
   
   ngOnInit() {
-    if (this.router.url == '/contact') {
+    if (this.router.url !== '/') {
       this.routeState = true;
     } 
   }
